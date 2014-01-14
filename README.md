@@ -1,4 +1,4 @@
-Randomattor
-===========
+Randomatic
+==========
 
-Simple utility to create random strings
+Simple utility to automate the creation of random sequences.
