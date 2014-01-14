@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Bootstrap 101 Template</title>
+        <title>Randomatic - Automate the creation of random sequences</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Automate the creation of random sequences">
+        
         <!-- Bootstrap -->
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="http://bootswatch.com/slate/bootstrap.min.css">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -14,6 +16,8 @@
           <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
 
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        
         <style>
             textarea {
                 border-color: #ccc;
@@ -28,65 +32,55 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-md-8">
-                    <h1>Randomattor <small>Comes to create the random !!!</small></h1>
+                <div class="col-md-10">
+                    <h1><i class="fa fa-briefcase"></i> Randomatic </h1>
+
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+
+
+                            <div class="row">
+                                
+                                <div class="col-md-4">
+                                    <label>
+                                        Num. Randoms <input type="text" class="form-control" value="1" id="numrandoms">
+                                    </label>
+
+                                    <label>
+                                        Random Length <input type="text" class="form-control" value="8" id="length">
+                                    </label>
+                                    
+                                    <br/>
+                                    <button class="btn btn-success btn-lg" id="generate">Generate</button>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <label>
+                                        <input type="checkbox" checked id="uppercase"> Uppercase letters
+                                    </label>
+                                    <br/>
+                                    <label>
+                                        <input type="checkbox" checked id="lowercase"> Lowercase letters
+                                    </label>
+                                    <br/>
+                                    <label>
+                                        <input type="checkbox" checked id="numbers"> Numbers
+                                    </label>
+                                    <br/>
+                                    <label>
+                                        <input type="checkbox" id="nonalpha"> Non alphanumeric
+                                    </label>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <textarea id="randoms" rows="10">Randoms...</textarea>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-md-3">
-                    <label>Alphabet</label>
-                    <label>
-                        <input type="checkbox" checked id="uppercase"> Upper
-                    </label>
-                    <label>
-                        <input type="checkbox" checked id="lowercase"> Lower
-                    </label>
-                </div>
-                <div class="col-md-2">
-                    <label>
-                        <input type="checkbox" checked id="numbers"> Numbers
-                    </label>
-                </div>
-                <div class="col-md-2">
-                    <label>
-                        <input type="checkbox" id="nonalpha"> Non alphanumeric
-                    </label>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-2">
-                    <label>
-                        Num. Randoms <input type="text" class="form-control" value="1" id="numrandoms">
-                    </label>
-                </div>
-                <div class="col-md-2">
-                    <label>
-                        Length <input type="text" class="form-control" value="8" id="length">
-                    </label>
-                </div>
-                <div class="col-md-2">
-                    <button class="btn btn-primary" id="generate">Generate</button>
-                </div>
-            </div>
-
-            <hr/>
-
-            <div class="row">
-                <div class="col-md-8">
-
-                    <textarea id="randoms">Randoms...</textarea>
-
-                </div>
-            </div>
-
-
-
         </div>
-
-
-
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://code.jquery.com/jquery.js"></script>
